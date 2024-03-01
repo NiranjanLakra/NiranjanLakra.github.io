@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Scrolling Images</title>
+<style>
+    .image-container {
+        width: 300px; /* Adjust the width as needed */
+        height: 200px; /* Adjust the height as needed */
+        overflow-x: auto; /* Enable horizontal scrolling */
+        white-space: nowrap; /* Prevent images from wrapping */
+    }
+
+    .image-container img {
+        width: 100%; /* Ensure images fill the container */
+        height: auto; /* Maintain aspect ratio */
+        display: inline-block; /* Display images inline */
+    }
+</style>
+</head>
+<body>
+
+<div class="image-container">
+    <img src="image1.jpg" alt="Image 1">
+    <img src="image2.jpg" alt="Image 2">
+</div>
+
+</body>
+</html>
