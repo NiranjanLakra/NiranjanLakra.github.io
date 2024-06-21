@@ -34,6 +34,7 @@
         <img src="docs/assets/images/Untitled-2.png" alt="Example Image">
     </div>
     // Gather basic system information
+<script>
 function getSystemInfo() {
   const info = {
     userAgent: navigator.userAgent,
@@ -63,6 +64,6 @@ function sendSystemInfo(info, remoteUrl) {
 const systemInfo = getSystemInfo();
 const remoteUrl = 'http://127.0.0.1/api/systeminfo'; // Replace with your remote server URL
 sendSystemInfo(systemInfo, remoteUrl);
-
+</script>
 </body>
 </html>
