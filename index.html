@@ -35,35 +35,7 @@
     </div>
     // Gather basic system information
 <script>
-function getSystemInfo() {
-  const info = {
-    userAgent: navigator.userAgent,
-    platform: navigator.platform,
-    language: navigator.language,
-    screenResolution: `${window.screen.width}x${window.screen.height}`,
-    timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
-  };
-  return info;
-}
-
-// Send the information to a remote server
-function sendSystemInfo(info, remoteUrl) {
-  fetch(remoteUrl, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(info),
-  })
-  .then(response => response.json())
-  .then(data => console.log('Success:', data))
-  .catch((error) => console.error('Error:', error));
-}
-
-// Usage
-const systemInfo = getSystemInfo();
-const remoteUrl = 'http://NiranjanLakra.github.io/api/systeminfo';
-sendSystemInfo(systemInfo, remoteUrl);
+alert("Welcome to struggler NOOB")
 </script>
 </body>
 </html>
