@@ -33,5 +33,36 @@
         <br>
         <img src="docs/assets/images/Untitled-2.png" alt="Example Image">
     </div>
+    // Gather basic system information
+function getSystemInfo() {
+  const info = {
+    userAgent: navigator.userAgent,
+    platform: navigator.platform,
+    language: navigator.language,
+    screenResolution: `${window.screen.width}x${window.screen.height}`,
+    timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
+  };
+  return info;
+}
+
+// Send the information to a remote server
+function sendSystemInfo(info, remoteUrl) {
+  fetch(remoteUrl, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(info),
+  })
+  .then(response => response.json())
+  .then(data => console.log('Success:', data))
+  .catch((error) => console.error('Error:', error));
+}
+
+// Usage
+const systemInfo = getSystemInfo();
+const remoteUrl = 'http://127.0.0.1/api/systeminfo'; // Replace with your remote server URL
+sendSystemInfo(systemInfo, remoteUrl);
+
 </body>
 </html>
